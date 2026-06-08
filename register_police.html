@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Police - Admin Panel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #56ccf2, #2f80ed);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            width: 450px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2f80ed;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2f80ed;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1c5db5;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .back-link a {
+            color: #2f80ed;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>👮 Register Police Officer</h2>
+        <form action="RegisterPoliceServlet" method="post">
+            <input type="text" name="pname" placeholder="Full Name" required>
+            <input type="text" name="pstation" placeholder="Station" required>
+            <input type="text" name="pcontact" placeholder="Contact" required>
+            <input type="email" name="pemail" placeholder="Email Address" required>
+            <input type="password" name="ppassword" placeholder="Password" required>
+            <button type="submit">Register Officer</button>
+        </form>
+
+        <div class="back-link">
+            <a href="admin_dashboard.html">⬅ Back to Dashboard</a>
+        </div>
+    </div>
+
+</body>
+</html>

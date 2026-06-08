@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Safety Alert - NariSuraksha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #e91e63;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #e91e63;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(setPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function setPosition(position) {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            const locationURL = `https://www.google.com/maps?q=${lat},${lng}`;
+            document.getElementById("alocation").value = locationURL;
+        }
+
+        function showError(error) {
+            alert("Location access denied or unavailable.");
+        }
+    </script>
+</head>
+<body onload="getLocation()">
+
+<div class="form-container">
+    <h2>🚨 Send Safety Alert</h2>
+    <form action="SendAlertServlet" method="post">
+        <input type="text" id="alocation" name="alocation" placeholder="Fetching your location..." readonly required>
+
+        <select name="aalerttype" required>
+            <option value="">Select Alert Type</option>
+            <option value="Harassment">Harassment</option>
+            <option value="Stalking">Stalking</option>
+            <option value="Violence">Violence</option>
+            <option value="Emergency">Emergency</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <textarea name="adesc" placeholder="Describe the situation..." required></textarea>
+        <input type="text" name="adate" placeholder="Enter Date" required>
+        <input type="hidden" name="astatus" value="Pending">
+
+        <button type="submit">Send Alert</button>
+    </form>
+</div>
+
+</body>
+</html>

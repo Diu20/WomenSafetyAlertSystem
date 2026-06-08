@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Police Dashboard - NariSuraksha</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #56ccf2, #2f80ed);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dashboard {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            width: 450px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #2f80ed;
+            margin-bottom: 25px;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-container a {
+            padding: 12px;
+            background-color: #2f80ed;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-container a:hover {
+            background-color: #1c5db5;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+        <h2>👮 Police Dashboard</h2>
+
+        <div class="btn-container">
+            <a href="view_alerts_police.jsp">👁 View Alerts</a>
+            <a href="response_to_alert.jsp">✅ Respond to Alerts</a>
+            <a href="logout.html">🚪 Logout</a>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 NariSuraksha | Police Portal
+        </div>
+    </div>
+
+</body>
+</html>

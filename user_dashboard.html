@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard - NariSuraksha</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dashboard {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #e91e63;
+            margin-bottom: 25px;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-container a {
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: #e91e63;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-container a:hover {
+            background-color: #c2185b;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+        <h2>Welcome to User Dashboard</h2>
+
+        <div class="btn-container">
+            <a href="send_alert.html">🚨 Send Safety Alert</a>
+            <a href="view_police_responses.jsp">📋 View Police Responses</a>
+            <a href="change_password.html">🔒 Change Password</a>
+            <a href="logout.html">🚪Logout</a>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 NariSuraksha | Women Safety Alert System
+        </div>
+    </div>
+
+</body>
+</html>

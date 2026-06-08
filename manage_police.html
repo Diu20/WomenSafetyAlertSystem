@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Police - Admin Panel</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 500px;
+    }
+
+    h2 {
+      color: #e91e63;
+      margin-bottom: 30px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn-group a {
+      padding: 15px;
+      background-color: #e91e63;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-group a:hover {
+      background-color: #c2185b;
+    }
+
+    .btn-group a:nth-child(1)::before {
+      content: "➕ ";
+    }
+
+    .btn-group a:nth-child(2)::before {
+      content: "👁 ";
+    }
+
+    .btn-group a:nth-child(3)::before {
+      content: "❌ ";
+    }
+
+    .back-link {
+      margin-top: 25px;
+    }
+
+    .back-link a {
+      color: #e91e63;
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>👮 Manage Police Officers</h2>
+    
+    <div class="btn-group">
+      <a href="register_police.html">Add Police</a>
+      <a href="admin_table_view.jsp">View Police</a>
+      <a href="admin_delete_table.jsp">Delete Police</a>
+    </div>
+
+    <div class="back-link">
+      <a href="admin_dashboard.html">⬅ Back to Dashboard</a>
+    </div>
+  </div>
+
+</body>
+</html>
